@@ -21,6 +21,8 @@ Proyecto de aprendizaje realizado en el curso **React de Cero a Experto**, grac
 - Javascript
 - React
 
+---
+
 # Instrucciones
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
