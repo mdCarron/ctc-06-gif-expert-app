@@ -11,6 +11,7 @@ Proyecto de aprendizaje realizado en el curso **React de Cero a Experto**, grac
 ## 🔍 Objetivos
 
 - Hooks
+- Custom Hooks
 - PropTypes
 - Fetch API
 -
