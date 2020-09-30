@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import GifGridItem from "./GifGridItem";
 
 const GifGrid = ({ categoria }) => {
@@ -20,18 +20,18 @@ const GifGrid = ({ categoria }) => {
         url: gif.images.downsized_medium.url,
       };
     });
-    console.log(gifs);
     setGifs(gifs);
   };
 
   return (
-    <div>
+    <Fragment>
       <h3>{categoria}</h3>
-
-      {gifs.map((gif) => (
-        <GifGridItem key={gif.id} {...gif} />
-      ))}
-    </div>
+      <div className="card-grid">
+        {gifs.map((gif) => (
+          <GifGridItem key={gif.id} {...gif} />
+        ))}
+      </div>
+    </Fragment>
   );
 };
 
