@@ -1,27 +1,14 @@
 import React, { useState, useEffect, Fragment } from "react";
+import { getGifs } from "../helpers/getGifs";
 import GifGridItem from "./GifGridItem";
 
 const GifGrid = ({ categoria }) => {
   const [gifs, setGifs] = useState([]);
   useEffect(() => {
-    getGifs();
-  }, []);
-
-  const getGifs = async () => {
-    const url =
-      "http://api.giphy.com/v1/gifs/search?q=nes&limit=10&api_key=pZF5taT2C8y5Jk6AOVAZpZhF7B0b4j17";
-    const resp = await fetch(url);
-    const { data } = await resp.json();
-
-    const gifs = data.map((gif) => {
-      return {
-        id: gif.id,
-        title: gif.title,
-        url: gif.images.downsized_medium.url,
-      };
+    getGifs(categoria).then((gifs) => {
+      setGifs(gifs);
     });
-    setGifs(gifs);
-  };
+  }, [categoria]);
 
   return (
     <Fragment>
