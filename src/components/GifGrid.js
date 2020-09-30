@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import GifGridItem from "./GifGridItem";
 
 const GifGrid = ({ categoria }) => {
+  const [gifs, setGifs] = useState([]);
   useEffect(() => {
     getGifs();
   }, []);
@@ -20,15 +21,18 @@ const GifGrid = ({ categoria }) => {
       };
     });
     console.log(gifs);
+    setGifs(gifs);
   };
 
   return (
     <div>
       <h3>{categoria}</h3>
+
+      {gifs.map((gif) => (
+        <GifGridItem key={gif.id} {...gif} />
+      ))}
     </div>
   );
 };
-
-GifGrid.propTypes = {};
 
 export default GifGrid;

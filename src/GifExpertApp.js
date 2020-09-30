@@ -1,14 +1,13 @@
 import React, { Fragment, useState } from "react";
-import PropTypes from "prop-types";
 import AddCategory from "./components/AddCategory";
 import GifGrid from "./components/GifGrid";
 
 const GifExpertApp = () => {
   const [categorias, setCategorias] = useState(["Metroid"]);
 
-  const handleAdd = () => {
+  /*   const handleAdd = () => {
     setCategorias([...categorias, "Metroid"]);
-  };
+  }; */
 
   return (
     <Fragment>
@@ -23,7 +22,5 @@ const GifExpertApp = () => {
     </Fragment>
   );
 };
-
-GifExpertApp.propTypes = {};
 
 export default GifExpertApp;
