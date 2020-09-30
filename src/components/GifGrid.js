@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 const GifGrid = ({ categoria }) => {
+  useEffect(() => {
+    getGifs();
+  }, []);
+
   const getGifs = async () => {
     const url =
       "http://api.giphy.com/v1/gifs/search?q=nes&limit=10&api_key=pZF5taT2C8y5Jk6AOVAZpZhF7B0b4j17";
@@ -17,7 +21,6 @@ const GifGrid = ({ categoria }) => {
     });
     console.log(gifs);
   };
-  getGifs();
 
   return (
     <div>
