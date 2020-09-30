@@ -1,13 +1,10 @@
 import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import AddCategory from "./components/AddCategory";
+import GifGrid from "./components/GifGrid";
 
 const GifExpertApp = () => {
-  const [categorias, setCategorias] = useState([
-    "Super Mario",
-    "Zelda",
-    "Final Fantasy",
-  ]);
+  const [categorias, setCategorias] = useState(["Metroid"]);
 
   const handleAdd = () => {
     setCategorias([...categorias, "Metroid"]);
@@ -19,9 +16,9 @@ const GifExpertApp = () => {
       <AddCategory setCategorias={setCategorias} categorias={categorias} />
       <hr />
       <ul>
-        {categorias.map((categoria) => {
-          return <li key={categoria}>{categoria}</li>;
-        })}
+        {categorias.map((categoria) => (
+          <GifGrid key={categoria} categoria={categoria} />
+        ))}
       </ul>
     </Fragment>
   );
