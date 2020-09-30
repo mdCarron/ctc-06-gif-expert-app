@@ -7,8 +7,10 @@ const GifGrid = ({ categoria }) => {
 
   return (
     <Fragment>
-      <h3>{categoria}</h3>
-      {loading && <p>generando gifs...</p>}
+      <h3 className="animate__animated animate__fadeInLeft">{categoria}</h3>
+      {loading && (
+        <p className="animate__animated animate__flash">generando gifs...</p>
+      )}
       <div className="card-grid">
         {gifs.map((gif) => (
           <GifGridItem key={gif.id} {...gif} />

@@ -14,12 +14,12 @@ Proyecto de aprendizaje realizado en el curso **React de Cero a Experto**, grac
 - Custom Hooks
 - PropTypes
 - Fetch API
--
 
 ## ✅ Tecnologías
 
 - Javascript
 - React
+- animate.css
 
 ---
 
