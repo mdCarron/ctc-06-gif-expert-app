@@ -6,6 +6,7 @@ const AddCategory = ({ setCategorias }) => {
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
+    console.log("handleinputchange llamado");
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ const AddCategory = ({ setCategorias }) => {
   return (
     <Fragment>
       <form onSubmit={handleSubmit}>
+        <p>{inputValue}</p>
         <input type="text" value={inputValue} onChange={handleInputChange} />
       </form>
     </Fragment>

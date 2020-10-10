@@ -5,6 +5,7 @@ exports[`test en componente <AddCategory /> should snapshot match 1`] = `
   <form
     onSubmit={[Function]}
   >
+    <p />
     <input
       onChange={[Function]}
       type="text"

@@ -5,10 +5,6 @@ import GifGrid from "./components/GifGrid";
 const GifExpertApp = () => {
   const [categorias, setCategorias] = useState(["Metroid"]);
 
-  /*   const handleAdd = () => {
-    setCategorias([...categorias, "Metroid"]);
-  }; */
-
   return (
     <Fragment>
       <h2>GifExpertApp</h2>
