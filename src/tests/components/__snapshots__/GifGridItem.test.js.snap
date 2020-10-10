@@ -4,7 +4,12 @@ exports[`Test del componente <GifGridItem /> should renderizar el componente cor
 <div
   className="card animate__animated animate__fadeInLeft"
 >
-  <img />
-  <p />
+  <img
+    alt="Titulo de string"
+    src="https://localhost/direccion-en-url.jpg"
+  />
+  <p>
+    Titulo de string
+  </p>
 </div>
 `;
