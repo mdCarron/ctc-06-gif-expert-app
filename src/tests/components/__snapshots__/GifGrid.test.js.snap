@@ -11,8 +11,14 @@ exports[`testing en componente <GifGrid /> should debe de mostrar items cuando s
     className="card-grid"
   >
     <GifGridItem
-      id="ABC"
-      key="ABC"
+      id="1"
+      key="1"
+      title="MockTitle"
+      url="https://localhost/img.gif"
+    />
+    <GifGridItem
+      id="2"
+      key="2"
       title="MockTitle"
       url="https://localhost/img.gif"
     />

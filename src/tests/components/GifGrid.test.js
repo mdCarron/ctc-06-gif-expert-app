@@ -22,7 +22,12 @@ describe("testing en componente <GifGrid />", () => {
   test("should debe de mostrar items cuando se cargan las imagenes con useFetchGif", () => {
     const gifs = [
       {
-        id: "ABC",
+        id: "1",
+        title: "MockTitle",
+        url: "https://localhost/img.gif",
+      },
+      {
+        id: "2",
         title: "MockTitle",
         url: "https://localhost/img.gif",
       },
@@ -36,5 +41,7 @@ describe("testing en componente <GifGrid />", () => {
     const wrapper = shallow(<GifGrid categoria={categoria} />);
 
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find("p").exists()).toBe(false);
+    expect(wrapper.find("GifGridItem").length).toBe(gifs.length);
   });
 });
