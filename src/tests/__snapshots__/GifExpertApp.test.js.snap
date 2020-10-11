@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing en componente <GifExpertApp /> should hacer match con snapshot 1`] = `
+<Fragment>
+  <h2>
+    GifExpertApp
+  </h2>
+  <AddCategory
+    categorias={Array []}
+    setCategorias={[Function]}
+  />
+  <hr />
+  <ul />
+</Fragment>
+`;
+
+exports[`testing en componente <GifExpertApp /> should iniciar con las categorias indicadas 1`] = `
+<Fragment>
+  <h2>
+    GifExpertApp
+  </h2>
+  <AddCategory
+    categorias={
+      Array [
+        "super nintendo",
+        "nes",
+      ]
+    }
+    setCategorias={[Function]}
+  />
+  <hr />
+  <ul>
+    <GifGrid
+      categoria="super nintendo"
+      key="super nintendo"
+    />
+    <GifGrid
+      categoria="nes"
+      key="nes"
+    />
+  </ul>
+</Fragment>
+`;

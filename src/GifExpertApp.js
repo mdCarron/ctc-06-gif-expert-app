@@ -2,8 +2,9 @@ import React, { Fragment, useState } from "react";
 import AddCategory from "./components/AddCategory";
 import GifGrid from "./components/GifGrid";
 
-const GifExpertApp = () => {
-  const [categorias, setCategorias] = useState(["Metroid"]);
+const GifExpertApp = ({ defaultCategorias = [] }) => {
+  // const [categorias, setCategorias] = useState(["Metroid"]);
+  const [categorias, setCategorias] = useState(defaultCategorias);
 
   return (
     <Fragment>
