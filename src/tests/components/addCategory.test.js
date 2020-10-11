@@ -29,4 +29,16 @@ describe("test en componente <AddCategory />", () => {
 
     expect(setCategorias).not.toHaveBeenCalled();
   });
+
+  test("should llamar el setCategorias y limpiar la caja de texto", () => {
+    const value = "Hola Mundo";
+    // 1. simular el inputChange
+    wrapper.find("input").simulate("change", { target: { value } });
+    // 2. simular el submit
+    wrapper.find("form").simulate("submit", { preventDefault() {} });
+    // 3. setCategorias se debe de haber llamado
+    expect(setCategorias).toHaveBeenCalled();
+    // 4. el valor del input debe de estar reseteado
+    expect(wrapper.find("input").prop("value")).toBe("");
+  });
 });
